@@ -28,28 +28,21 @@ CORRECT!
 Game over!!!
 
 2)Write a Python program to generate first ‘n ’Fibonacci numbers.
-n=int(input("Enter the value of n \n"))
-fib1,fib2=0,1
-if(n < 0) :
-    print("invalid range n  ")
+n = int(input("Enter n:"))
+n1,n2 = 0,1
+
+if n<=0:
+    print("Please enter a positive integer")
+elif n==1:
+    print("Fibonacci sequence upto",n,":")
+    print(n1)
 else:
-    print("fibonacci series :")
-    
-    if n==1 :
-        print(fib1)
-    else:
-        print(fib1,fib2,end=" ")
-        for i in range(3,n+1):
-            fib3=fib1+fib2
-            print(fib3,end=" ")
-            fib1=fib2
-            fib2=fib3
-          
-Output:
-Enter the value of n 
-5
-fibonacci series :
-0 1 1 2 3
+    print("Fibonacci series:")
+    for i in range(n):
+        print(n1,end=" ")
+        n3 = n1+n2
+        n1=n2
+        n2=n3
 
 3)Write a program to count the number of each vowel in a given string.
 
